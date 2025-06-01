@@ -1,3 +1,5 @@
 def call(String goals = 'clean install') {
-       sh 'mvn ${goals}'
+    stage('Maven Build') {
+        sh "mvn ${goals}"
+    }
 }
